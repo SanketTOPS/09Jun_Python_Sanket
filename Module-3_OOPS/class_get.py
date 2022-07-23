@@ -3,15 +3,8 @@ class student:
     stnm="Nirav"
 
     def getdata(self):
-        print("This is Student Class")
+        print("Student ID:",self.stid)
+        print("Student Name:",self.stnm)
 
-
-# Creating object
 st=student()
-print(st.stid)
-print(st.stnm)
 st.getdata()
-
-
-
-
