@@ -38,6 +38,7 @@ tp=tops()
 tp.n_getdata()
 tp.a_getdata()
 tp.p_getdata()
+
 tp.printdata()
 
 
