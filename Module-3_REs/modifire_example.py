@@ -20,6 +20,6 @@ mystr="This is Python! 56654"
 #x=re.findall("\d",mystr)
 #x=re.findall("\D",mystr)
 #x=re.findall("This|That",mystr)
-x=re.findall("Py..on",mystr)
+#x=re.findall("Py..on",mystr)
 print(x)
 
