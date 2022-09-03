@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Index</title>
+</head>
+<body bgcolor="lightblue">
+    <center><h1>Welcome to DBProject</h1></center>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Firstname" name="firstname"><br><br>
+        <input type="text" placeholder="Lastname" name="lastname"><br><br>
+        <input type="email" placeholder="Email" name="email"><br><br>
+        <input type="password" placeholder="Password" name="password"><br><br>
+        <input type="date" name="dob"><br><br>
+        <input type="number" placeholder="Mobile" name="mobile"><br><br>
+        <textarea name="address"></textarea><br><br>
+        <input type="submit" value="Signup">
+    </form>
+    <hr>
+    <a href="showdata">Go to Showdata</a>
+</body>
+</html>
