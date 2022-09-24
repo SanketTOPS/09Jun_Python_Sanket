@@ -47,12 +47,35 @@
 
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-success mx-2" type="submit">Search</button>
+
+                    {% if user is none %}
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal"
+                        type="button">Login</button>
+                    <button class="btn btn-outline-warning mx-2" data-bs-toggle="modal" data-bs-target="#signupModal"
+                        type="button">Signup</button>
+                    {% else %}
+                    <!-- Example single danger button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{user}}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/profile">Update Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/userlogout">Logout</a></li>
+                        </ul>
+                    </div>
+                    {% endif %}
                 </form>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
+
 </body>
 
 </html>
