@@ -11,3 +11,9 @@ class userSignup(models.Model):
     city=models.CharField(max_length=20)
     state=models.CharField(max_length=20)
     zipcode=models.IntegerField()
+
+class mynotes(models.Model):
+    title=models.CharField(max_length=100)
+    cate=models.CharField(max_length=100)
+    selectfile=models.FileField(upload_to='MyNotes')
+    comments=models.TextField()

@@ -1,37 +1,49 @@
 from django.shortcuts import redirect, render
 from django.urls import is_valid_path
-from .forms import signupForm
+from .forms import signupForm,notesForm
 from .models import userSignup
 from django.contrib.auth import logout
 
 # Create your views here.
 
+def auth_signup(request):
+    newuser=signupForm(request.POST)
+    if newuser.is_valid():
+        newuser.save()
+        print("Your account has been created!")
+        return redirect('notes')
+    else:
+        print(newuser.errors)
+
+def auth_signin(request):
+    unm=request.POST['username']
+    pas=request.POST['password']
+    user=userSignup.objects.filter(username=unm,password=pas)
+    if user:
+        print("Login Successfully!")
+        request.session['user']=unm
+        return redirect('notes')
+    else:
+        print("Error....Login falid!")
+
+
 def index(request):
     if request.method=='POST':
         if request.POST.get('signup')=='signup':
-            newuser=signupForm(request.POST)
-            if newuser.is_valid():
-                newuser.save()
-                print("Your account has been created!")
-                return redirect('notes')
-            else:
-                print(newuser.errors)
+            auth_signup(request)
         elif request.POST.get('login')=='login':
-
-            unm=request.POST['username']
-            pas=request.POST['password']
-
-            user=userSignup.objects.filter(username=unm,password=pas)
-            if user:
-                print("Login Successfully!")
-                request.session['user']=unm
-                return redirect('notes')
-            else:
-                print("Error....Login falid!")
+            auth_signin(request)
     return render(request,'index.html')
 
 def notes(request):
     user=request.session.get('user')
+    if request.method=='POST':
+        note=notesForm(request.POST,request.FILES )
+        if note.is_valid():
+            note.save()
+            print("Your notes has been uploaded!")
+        else:
+            print(note.errors)
     return render(request,'notes.html',{'user':user})
 
 def about(request):
