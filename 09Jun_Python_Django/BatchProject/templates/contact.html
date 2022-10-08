@@ -1,58 +1,304 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-    <link rel="icon" href="/static/imgs/download.png">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Contact</title>
+
+  <link rel="icon" href="/static/imgs/download.png" >
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
 </head>
 
-<body>
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">ForumApp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/notes">Notes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
-                    </li>
+          <a class="navbar-brand" href="/">ForumApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/notes">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+              </li>
 
-                </ul>
+            </ul>
 
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+            <form class="d-flex" role="search">
+
+              <button class="btn btn-outline-danger mx-2" data-bs-toggle="modal" data-bs-target="#loginModal"
+                type="button">Login</button>
+              <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#signupModal"
+                type="button">Signup</button>
+            </form>
+          </div>
         </div>
-    </nav>
-    <!-- Navbar End -->
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding-top">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Get In Touch
+        </h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="map_container">
+            <div class="map-responsive">
+              <iframe
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=TOPS+Technologies"
+                width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-5 ">
+          <div class="form_container">
+            <form method="post">
+              {% csrf_token %}
+              <div>
+                <input type="text" placeholder="Name" name="name" />
+              </div>
+              <div>
+                <input type="email" placeholder="Email" name="email" />
+              </div>
+              <div>
+                <input type="text" placeholder="Phone Number" name="phone" />
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" name="msg" />
+              </div>
+              <input type="submit" value="Send">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              About Apartment
+            </h5>
+            <div>
+              <div class="img-box">
+                <img src="/static/images/location.png" width="18px" alt="">
+              </div>
+              <p>
+                Address
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="/static/images/phone.png" width="12px" alt="">
+              </div>
+              <p>
+                +01 1234567890
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="/static/images/mail.png" width="18px" alt="">
+              </div>
+              <p>
+                demo@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Information
+            </h5>
+            <p>
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_links">
+            <h5>
+              Useful Link
+            </h5>
+            <ul>
+              <li>
+                <a href="">
+                  There are many
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  variations of
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  passages of
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Lorem Ipsum
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  available, but
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  the i
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <img src="/static/images/fb.png" alt="">
+              </a>
+              <a href="">
+                <img src="/static/images/twitter.png" alt="">
+              </a>
+              <a href="">
+                <img src="/static/images/linkedin.png" alt="">
+              </a>
+              <a href="">
+                <img src="/static/images/youtube.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </section>
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+  <script type="text/javascript" src="/static/js/custom.js"></script>
+
+
+  <script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?59608';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+      "enabled": true,
+      "chatButtonSetting": {
+        "backgroundColor": "#4dc247",
+        "ctaText": "",
+        "borderRadius": "20",
+        "marginLeft": "0",
+        "marginBottom": "50",
+        "marginRight": "50",
+        "position": "right"
+      },
+      "brandSetting": {
+        "brandName": "ForumApp",
+        "brandSubTitle": "For better communication....",
+        "brandImg": "/static/imgs/download.png",
+        "welcomeText": "Hi there!\nHow can I help you?",
+        "messageText": "Hello, I have a question about {{page_link}}",
+        "backgroundColor": "#37465c",
+        "ctaText": "Start Chat",
+        "borderRadius": "25",
+        "autoShow": false,
+        "phoneNumber": "919724799469"
+      }
+    };
+    s.onload = function () {
+      CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  </script>
+</body>
 </body>
 
 </html>

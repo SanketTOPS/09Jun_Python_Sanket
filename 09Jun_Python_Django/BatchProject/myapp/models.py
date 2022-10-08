@@ -17,3 +17,10 @@ class mynotes(models.Model):
     cate=models.CharField(max_length=100)
     selectfile=models.FileField(upload_to='MyNotes')
     comments=models.TextField()
+
+class contact(models.Model):
+    created=models.DateTimeField(auto_now_add=True)
+    name=models.CharField(max_length=20)
+    email=models.EmailField()
+    phone=models.BigIntegerField()
+    msg=models.TextField()
